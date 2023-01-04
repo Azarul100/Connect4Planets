@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script>
+</script>
+<style>
+
+.name1
+{
+	color: white;
+	position: fixed;
+    top: 285px;
+    left: 700px;
+	font-size: 25px;
+}
+
+.name2
+{
+	color: white;
+	position: fixed;
+    top: 550px;
+    left: 700px;
+	font-size: 25px;
+}
+
+.box1
+{
+	padding: 10px 10px 10px 10px;
+	position: fixed;
+    top: 280px;
+    left: 800px;
+}
+
+.box2
+{
+	padding: 10px 10px 10px 10px;
+	position: fixed;
+    top: 545px;
+    left: 800px;
+}
+
+.cButton
+{
+	position: absolute;
+	padding: 10px 10px 10px 10px;
+	bottom:80px;
+	left: 875px;
+	background-image: url(name.png);
+	color: white;
+}
+
+.back
+{
+	position: absolute;
+	padding: 10px 10px 10px 10px;
+	bottom:30px;
+	left: 900px;
+	background-image: url(name.png);
+	color: white;
+}
+.planetName
+{
+	color: white;
+	font-size: 50px;
+	position: absolute;
+	top: 50px;
+	left: 800px;
+}
+
+</style>
+</head>
+<body background = "name.jpg">
+
+	<p class = "planetName"> Enter your Name </p>
+
+	<form method = "get" action = "planet.html">
+
+		<div class = "name1">Player 1: </div><input class = "box1" type = "text" name = "playerone" value = ""/>
+		<div class = "name2">Player 2: </div><input class = "box2" type = "text" name = "playertwo" value = ""/>
+
+		<input class = "cButton" type = "submit" value = "Choose Planet"/>
+	</form>
+	<br/>
+	<form action = "home.html">
+		<div><input class = "back" type = "submit" value = "Back"/></div>
+	</form>	
+</body>
+</html>

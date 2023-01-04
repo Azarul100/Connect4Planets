@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+	function initialize()
+	{
+		name = location.search.split("?")[1];
+		newName = name.split("&");
+		playerone = newName[2].split("=")[1];
+		playertwo = newName[3].split("=")[1];
+		imageone = newName[0].split("=")[1];
+		imagetwo = newName[1].split("=")[1];
+		document.getElementById("one").innerHTML = playerone;
+		document.getElementById("two").innerHTML = playertwo;
+		document.getElementById("picOne").src = imageone + ".jpg";
+		document.getElementById("picOne").className = imageone + "2";
+		document.getElementById("picTwo").src = imagetwo + ".jpg";
+		document.getElementById("picTwo").className = imagetwo + "2";
+		document.getElementById("status").innerHTML = "Game in progress";
+		
+		PLAYERONE = 1;
+		PLAYERTWO = 2;
+		TURN = 0;
+		NoWinner = 6;
+		WINNER = 7;
+		LOSER = 8;
+		ENDGAME = 9;
+		
+		array = ["mercury", "venus", "earth", "mars", "jupiter", "saturn", "uranus", "neptune"];
+		array1 = [];
+		array2 = [];
+		array3 = [];
+		array4 = [];
+		array5 = [];
+		array6 = [];
+		array7 = [];
+		
+		start();
+	}
+	
+	function start()
+	{
+		num = (Math.floor(Math.random() * 2) + 1);
+		if(num == 1)
+		{
+			TURN = PLAYERONE;
+			document.getElementById("one").style.color = "yellow";
+		}	
+		else
+		{
+			TURN = PLAYERTWO;
+			document.getElementById("two").style.color = "yellow";
+			
+		}
+	}
+	
+	function check()
+	{
+		for(a = 0; a < 7; a++)
+		{
+			if(a == 0)
+			{
+				list = array1;
+				for(b = 0; b < list.length; b++)
+				{
+					if(list[b] == "the" && list[b+1] == "the" && list[b+2] == "the" && list[b+3] == "the")
+					{	
+						PLAYERONE = WINNER;
+						PLAYERTWO = LOSER;
+						TURN = ENDGAME;
+						end();
+					}
+					if(list[b] == "this" && list[b+1] == "this" && list[b+2] == "this" && list[b+3] == "this")
+					{
+						PLAYERONE = LOSER;
+						PLAYERTWO = WINNER;
+						TURN = ENDGAME;
+						end();
+					}
+				}
+			}
+		}
+		
+			for(a = 0; a < 7; a++)
+		{
+			if(a == 0)
+			{
+				list = array2;
+				for(b = 0; b < list.length; b++)
+				{
+					if(list[b] == "the" && list[b+1] == "the" && list[b+2] == "the" && list[b+3] == "the")
+					{	
+						PLAYERONE = WINNER;
+						PLAYERTWO = LOSER;
+						TURN = ENDGAME;
+						end();
+					}
+					if(list[b] == "this" && list[b+1] == "this" && list[b+2] == "this" && list[b+3] == "this")
+					{
+						PLAYERONE = LOSER;
+						PLAYERTWO = WINNER;
+						TURN = ENDGAME;
+						end();
+					}
+				}
+			}
+		}
+		
+			for(a = 0; a < 7; a++)
+		{
+			if(a == 0)
+			{
+				list = array3;
+				for(b = 0; b < list.length; b++)
+				{
+					if(list[b] == "the" && list[b+1] == "the" && list[b+2] == "the" && list[b+3] == "the")
+					{	
+						PLAYERONE = WINNER;
+						PLAYERTWO = LOSER;
+						TURN = ENDGAME;
+						end();
+					}
+					if(list[b] == "this" && list[b+1] == "this" && list[b+2] == "this" && list[b+3] == "this")
+					{
+						PLAYERONE = LOSER;
+						PLAYERTWO = WINNER;
+						TURN = ENDGAME;
+						end();
+					}
+				}
+			}
+		}
+		
+			for(a = 0; a < 7; a++)
+		{
+			if(a == 0)
+			{
+				list = array4;
+				for(b = 0; b < list.length; b++)
+				{
+					if(list[b] == "the" && list[b+1] == "the" && list[b+2] == "the" && list[b+3] == "the")
+					{	
+						PLAYERONE = WINNER;
+						PLAYERTWO = LOSER;
+						TURN = ENDGAME;
+						end();
+					}
+					if(list[b] == "this" && list[b+1] == "this" && list[b+2] == "this" && list[b+3] == "this")
+					{
+						PLAYERONE = LOSER;
+						PLAYERTWO = WINNER;
+						TURN = ENDGAME;
+						end();
+					}
+				}
+			}
+		}
+		
+			for(a = 0; a < 7; a++)
+		{
+			if(a == 0)
+			{
+				list = array5;
+				for(b = 0; b < list.length; b++)
+				{
+					if(list[b] == "the" && list[b+1] == "the" && list[b+2] == "the" && list[b+3] == "the")
+					{	
+						PLAYERONE = WINNER;
+						PLAYERTWO = LOSER;
+						TURN = ENDGAME;
+						end();
+					}
+					if(list[b] == "this" && list[b+1] == "this" && list[b+2] == "this" && list[b+3] == "this")
+					{
+						PLAYERONE = LOSER;
+						PLAYERTWO = WINNER;
+						TURN = ENDGAME;
+						end();
+					}
+				}
+			}
+		}
+		
+			for(a = 0; a < 7; a++)
+		{
+			if(a == 0)
+			{
+				list = array6;
+				for(b = 0; b < list.length; b++)
+				{
+					if(list[b] == "the" && list[b+1] == "the" && list[b+2] == "the" && list[b+3] == "the")
+					{	
+						PLAYERONE = WINNER;
+						PLAYERTWO = LOSER;
+						TURN = ENDGAME;
+						end();
+					}
+					if(list[b] == "this" && list[b+1] == "this" && list[b+2] == "this" && list[b+3] == "this")
+					{
+						PLAYERONE = LOSER;
+						PLAYERTWO = WINNER;
+						TURN = ENDGAME;
+						end();
+					}
+				}
+			}
+		}
+		
+			for(a = 0; a < 7; a++)
+		{
+			if(a == 0)
+			{
+				list = array7;
+				for(b = 0; b < list.length; b++)
+				{
+					if(list[b] == "the" && list[b+1] == "the" && list[b+2] == "the" && list[b+3] == "the")
+					{	
+						PLAYERONE = WINNER;
+						PLAYERTWO = LOSER;
+						TURN = ENDGAME;
+						end();
+					}
+					if(list[b] == "this" && list[b+1] == "this" && list[b+2] == "this" && list[b+3] == "this")
+					{
+						PLAYERONE = LOSER;
+						PLAYERTWO = WINNER;
+						TURN = ENDGAME;
+						end();
+					}
+				}
+			}
+		}
+		
+			for(a = 0; a < 7; a++)
+		{
+			if(a == 0)
+			{
+				for(b = 0; b < 7; b++)
+				{
+					if(array1[b] == "the" && array2[b] == "the" && array3[b] == "the" && array4[b] == "the")
+					{	
+						PLAYERONE = WINNER;
+						PLAYERTWO = LOSER;
+						TURN = ENDGAME;
+						end();
+					}
+					if(array2[b] == "the" && array3[b] == "the" && array4[b] == "the" && array5[b] == "the")
+					{
+						PLAYERONE = WINNER;
+						PLAYERTWO = LOSER;
+						TURN = ENDGAME;
+						end();
+					}
+					if(array3[b] == "the" && array4[b] == "the" && array5[b] == "the" && array6[b] == "the")
+					{
+						PLAYERONE = WINNER;
+						PLAYERTWO = LOSER;
+						TURN = ENDGAME;
+						end();
+					}
+					if(array4[b] == "the" && array5[b] == "the" && array6[b] == "the" && array7[b] == "the")
+					{
+						PLAYERONE = WINNER;
+						PLAYERTWO = LOSER;
+						TURN = ENDGAME;
+						end();
+					}
+					if(array1[b] == "this" && array2[b] == "this" && array3[b] == "this" && array4[b] == "this")
+					{
+						PLAYERONE = LOSER;
+						PLAYERTWO = WINNER;
+						TURN = ENDGAME;
+						end();
+					}
+					
+					if(array2[b] == "this" && array3[b] == "this" && array4[b] == "this" && array5[b] == "this")
+					{
+						PLAYERONE = LOSER;
+						PLAYERTWO = WINNER;
+						TURN = ENDGAME;
+						end();
+					}
+					if(array3[b] == "this" && array4[b] == "this" && array5[b] == "this" && array6[b] == "this")
+					{
+						PLAYERONE = LOSER;
+						PLAYERTWO = WINNER;
+						TURN = ENDGAME;
+						end();
+					}
+					if(array4[b] == "this" && array5[b] == "this" && array6[b] == "this" && array7[b] == "this")
+					{
+						PLAYERONE = LOSER;
+						PLAYERTWO = WINNER;
+						TURN = ENDGAME;
+						end();
+					}
+					
+				}
+			}
+		}
+		
+			for(a = 0; a < 7; a++)
+		{
+			if(a == 0)
+			{
+				for(b = 0; b < 7; b++)
+				{
+					if(array1[b] == "the" && array2[b + 1] == "the" && array3[b + 2] == "the" && array4[b + 3] == "the")
+					{	
+						PLAYERONE = WINNER;
+						PLAYERTWO = LOSER;
+						TURN = ENDGAME;
+						end();
+					}
+					
+					if(array2[b] == "the" && array3[b + 1] == "the" && array4[b + 2] == "the" && array5[b + 3] == "the")
+					{	
+						PLAYERONE = WINNER;
+						PLAYERTWO = LOSER;
+						TURN = ENDGAME;
+						end();
+					}
+					
+					if(array3[b] == "the" && array4[b + 1] == "the" && array5[b + 2] == "the" && array6[b + 3] == "the")
+					{	
+						PLAYERONE = WINNER;
+						PLAYERTWO = LOSER;
+						TURN = ENDGAME;
+						end();
+					}
+					
+					if(array4[b] == "the" && array5[b + 1] == "the" && array6[b + 2] == "the" && array7[b + 3] == "the")
+					{	
+						PLAYERONE = WINNER;
+						PLAYERTWO = LOSER;
+						TURN = ENDGAME;
+						end();
+					}
+					
+					if(array1[b] == "this" && array2[b + 1] == "this" && array3[b + 2] == "this" && array4[b + 3] == "this")
+					{	
+						PLAYERONE = LOSER;
+						PLAYERTWO = WINNER;
+						TURN = ENDGAME;
+						end();
+					}
+					
+					if(array2[b] == "this" && array3[b + 1] == "this" && array4[b + 2] == "this" && array5[b + 3] == "this")
+					{	
+						PLAYERONE = LOSER;
+						PLAYERTWO = WINNER;
+						TURN = ENDGAME;
+						end();
+					}
+					
+					if(array3[b] == "this" && array4[b + 1] == "this" && array5[b + 2] == "this" && array6[b + 3] == "this")
+					{	
+						PLAYERONE = LOSER;
+						PLAYERTWO = WINNER;
+						TURN = ENDGAME;
+						end();
+					}
+					
+					if(array4[b] == "this" && array5[b + 1] == "this" && array6[b + 2] == "this" && array7[b + 3] == "this")
+					{	
+						PLAYERONE = LOSER;
+						PLAYERTWO = WINNER;
+						TURN = ENDGAME;
+						end();
+					}
+					
+				}
+			}
+		}
+		
+		for(a = 0; a < 7; a++)
+		{
+			if(a == 0)
+			{
+				for(b = 7; b > 0; b--)
+				{
+					if(array1[b] == "the" && array2[b-1] == "the" && array3[b-2] == "the" && array4[b-3] == "the")
+					{	
+						PLAYERONE = WINNER;
+						PLAYERTWO = LOSER;
+						TURN = ENDGAME;
+						end();
+					}
+					if(array1[b] == "this" && array2[b-1] == "this" && array3[b-2] == "this" && array4[b-3] == "this")
+					{
+						PLAYERONE = LOSER;
+						PLAYERTWO = WINNER;
+						TURN = ENDGAME;
+						end();
+					}
+					if(array2[b] == "the" && array3[b-1] == "the" && array4[b-2] == "the" && array5[b-3] == "the")
+					{	
+						PLAYERONE = WINNER;
+						PLAYERTWO = LOSER;
+						TURN = ENDGAME;
+						end();
+					}
+					if(array2[b] == "this" && array3[b-1] == "this" && array4[b-2] == "this" && array5[b-3] == "this")
+					{
+						PLAYERONE = LOSER;
+						PLAYERTWO = WINNER;
+						TURN = ENDGAME;
+						end();
+					}
+					if(array3[b] == "the" && array4[b-1] == "the" && array5[b-2] == "the" && array6[b-3] == "the")
+					{	
+						PLAYERONE = WINNER;
+						PLAYERTWO = LOSER;
+						TURN = ENDGAME;
+						end();
+					}
+					if(array3[b] == "this" && array4[b-1] == "this" && array5[b-2] == "this" && array6[b-3] == "this")
+					{
+						PLAYERONE = LOSER;
+						PLAYERTWO = WINNER;
+						TURN = ENDGAME;
+						end();
+					}
+					if(array4[b] == "the" && array5[b-1] == "the" && array6[b-2] == "the" && array7[b-3] == "the")
+					{	
+						PLAYERONE = WINNER;
+						PLAYERTWO = LOSER;
+						TURN = ENDGAME;
+						end();
+					}
+					if(array4[b] == "this" && array5[b-1] == "this" && array6[b-2] == "this" && array7[b-3] == "this")
+					{
+						PLAYERONE = LOSER;
+						PLAYERTWO = WINNER;
+						TURN = ENDGAME;
+						end();
+					}
+					if(array1.length == 6 && array2.length == 6 && array3.length == 6 && array4.length == 6 && array5.length == 6 && array6.length == 6 && array7.length == 6)
+					{
+						PLAYERONE = NoWinner;
+						PLAYERTWO = NoWinner;
+						TURN = ENDGAME;
+						end();
+					}
+				}
+			}
+		}	
+	}
+	
+	function end()
+	{
+		if(TURN == ENDGAME)
+		{
+			if(PLAYERONE == WINNER)
+			{
+				document.getElementById("first").onclick = null;
+				document.getElementById("second").onclick = null;
+				document.getElementById("third").onclick = null;
+				document.getElementById("fourth").onclick = null;
+				document.getElementById("fifth").onclick = null;
+				document.getElementById("sixth").onclick = null;
+				document.getElementById("seventh").onclick = null;
+				document.getElementById("status").innerHTML = "Player 1 Wins!";
+			}
+			if(PLAYERTWO == WINNER)
+			{
+				document.getElementById("first").onclick = null;
+				document.getElementById("second").onclick = null;
+				document.getElementById("third").onclick = null;
+				document.getElementById("fourth").onclick = null;
+				document.getElementById("fifth").onclick = null;
+				document.getElementById("sixth").onclick = null;
+				document.getElementById("seventh").onclick = null;
+				document.getElementById("status").innerHTML = "Player 2 Wins!";
+			}
+			if(PLAYERONE == NoWinner || PLAYERTWO == NoWinner)
+			{
+				document.getElementById("first").onclick = null;
+				document.getElementById("second").onclick = null;
+				document.getElementById("third").onclick = null;
+				document.getElementById("fourth").onclick = null;
+				document.getElementById("fifth").onclick = null;
+				document.getElementById("sixth").onclick = null;
+				document.getElementById("seventh").onclick = null;
+				document.getElementById("status").innerHTML = "Draw";
+			}
+			
+		}
+	}
+	
+	function uno()
+	{	
+		if(TURN == PLAYERONE)
+		{
+			array1.push("the");
+			sum = 8 - array1.length;
+			
+			if(imageone == array[0])
+				document.getElementById(sum).style.backgroundImage = "url(mercury2.jpg)";
+			if(imageone == array[1])
+				document.getElementById(sum).style.backgroundImage = "url(venus2.jpg)";
+			if(imageone == array[2])
+				document.getElementById(sum).style.backgroundImage = "url(earth2.jpg)";
+			if(imageone == array[3])
+				document.getElementById(sum).style.backgroundImage = "url(mars2.jpg)";
+			if(imageone == array[4])
+				document.getElementById(sum).style.backgroundImage = "url(jupiter2.jpg)";
+			if(imageone == array[5])
+				document.getElementById(sum).style.backgroundImage = "url(saturn2.jpg)";
+			if(imageone == array[6])
+				document.getElementById(sum).style.backgroundImage = "url(uranus2.jpg)";
+			if(imageone == array[7])
+				document.getElementById(sum).style.backgroundImage = "url(neptune2.jpg)";
+			
+			TURN = PLAYERTWO;
+			document.getElementById("one").style.color = "white";
+			document.getElementById("two").style.color = "yellow";
+			document.getElementById("status").innerHTML = "Player 2's Turn";
+		}
+		else
+		{
+			array1.push("this");
+			sum = 8 - array1.length;
+			
+			if(imagetwo == array[0])
+				document.getElementById(sum).style.backgroundImage = "url(mercury2.jpg)";
+			if(imagetwo == array[1])
+				document.getElementById(sum).style.backgroundImage = "url(venus2.jpg)";
+			if(imagetwo == array[2])
+				document.getElementById(sum).style.backgroundImage = "url(earth2.jpg)";
+			if(imagetwo == array[3])
+				document.getElementById(sum).style.backgroundImage = "url(mars2.jpg)";
+			if(imagetwo == array[4])
+				document.getElementById(sum).style.backgroundImage = "url(jupiter2.jpg)";
+			if(imagetwo == array[5])
+				document.getElementById(sum).style.backgroundImage = "url(saturn2.jpg)";
+			if(imagetwo == array[6])
+				document.getElementById(sum).style.backgroundImage = "url(uranus2.jpg)";
+			if(imagetwo == array[7])
+				document.getElementById(sum).style.backgroundImage = "url(neptune2.jpg)";
+			
+			TURN = PLAYERONE;
+			document.getElementById("one").style.color = "yellow";
+			document.getElementById("two").style.color = "white";
+			document.getElementById("status").innerHTML = "Player 1's Turn";
+		}
+		check();
+	}
+	
+	function dos()
+	{
+		if(TURN == PLAYERONE)
+		{
+			array2.push("the");
+			sum2 = 15 - array2.length;
+			
+			if(sum2 < 8)
+				sum2 = null;
+			
+			if(imageone == array[0])
+				document.getElementById(sum2).style.backgroundImage = "url(mercury2.jpg)";
+			if(imageone == array[1])
+				document.getElementById(sum2).style.backgroundImage = "url(venus2.jpg)";
+			if(imageone == array[2])
+				document.getElementById(sum2).style.backgroundImage = "url(earth2.jpg)";
+			if(imageone == array[3])
+				document.getElementById(sum2).style.backgroundImage = "url(mars2.jpg)";
+			if(imageone == array[4])
+				document.getElementById(sum2).style.backgroundImage = "url(jupiter2.jpg)";
+			if(imageone == array[5])
+				document.getElementById(sum2).style.backgroundImage = "url(saturn2.jpg)";
+			if(imageone == array[6])
+				document.getElementById(sum2).style.backgroundImage = "url(uranus2.jpg)";
+			if(imageone == array[7])
+				document.getElementById(sum2).style.backgroundImage = "url(neptune2.jpg)";
+			
+			TURN = PLAYERTWO;
+			document.getElementById("one").style.color = "white";
+			document.getElementById("two").style.color = "yellow";
+			document.getElementById("status").innerHTML = "Player 2's Turn";
+			document.getElementById("status").innerHTML = "Player 2's Turn";
+		}
+		else
+		{
+			array2.push("this");
+			sum2 = 15 - array2.length;
+			
+			if(sum2 < 8)
+				sum2 = null;
+			
+			if(imagetwo == array[0])
+				document.getElementById(sum2).style.backgroundImage = "url(mercury2.jpg)";
+			if(imagetwo == array[1])
+				document.getElementById(sum2).style.backgroundImage = "url(venus2.jpg)";
+			if(imagetwo == array[2])
+				document.getElementById(sum2).style.backgroundImage = "url(earth2.jpg)";
+			if(imagetwo == array[3])
+				document.getElementById(sum2).style.backgroundImage = "url(mars2.jpg)";
+			if(imagetwo == array[4])
+				document.getElementById(sum2).style.backgroundImage = "url(jupiter2.jpg)";
+			if(imagetwo == array[5])
+				document.getElementById(sum2).style.backgroundImage = "url(saturn2.jpg)";
+			if(imagetwo == array[6])
+				document.getElementById(sum2).style.backgroundImage = "url(uranus2.jpg)";
+			if(imagetwo == array[7])
+				document.getElementById(sum2).style.backgroundImage = "url(neptune2.jpg)";
+			
+			TURN = PLAYERONE;
+			document.getElementById("one").style.color = "yellow";
+			document.getElementById("two").style.color = "white";
+			document.getElementById("status").innerHTML = "Player 1's Turn";
+		}
+		check();
+	}
+	
+	function tres()
+	{
+		if(TURN == PLAYERONE)
+		{
+			array3.push("the");
+			sum3 = 22 - array3.length;
+			
+			if(sum3 < 15)
+				sum3 = null;
+			
+			if(imageone == array[0])
+				document.getElementById(sum3).style.backgroundImage = "url(mercury2.jpg)";
+			if(imageone == array[1])
+				document.getElementById(sum3).style.backgroundImage = "url(venus2.jpg)";
+			if(imageone == array[2])
+				document.getElementById(sum3).style.backgroundImage = "url(earth2.jpg)";
+			if(imageone == array[3])
+				document.getElementById(sum3).style.backgroundImage = "url(mars2.jpg)";
+			if(imageone == array[4])
+				document.getElementById(sum3).style.backgroundImage = "url(jupiter2.jpg)";
+			if(imageone == array[5])
+				document.getElementById(sum3).style.backgroundImage = "url(saturn2.jpg)";
+			if(imageone == array[6])
+				document.getElementById(sum3).style.backgroundImage = "url(uranus2.jpg)";
+			if(imageone == array[7])
+				document.getElementById(sum3).style.backgroundImage = "url(neptune2.jpg)";
+			
+			TURN = PLAYERTWO;
+			document.getElementById("one").style.color = "white";
+			document.getElementById("two").style.color = "yellow";
+			document.getElementById("status").innerHTML = "Player 2's Turn";
+		}
+		else
+		{
+			array3.push("this");
+			sum3 = 22 - array3.length;
+			
+			if(sum3 < 15)
+				sum3 = null;
+			
+			if(imagetwo == array[0])
+				document.getElementById(sum3).style.backgroundImage = "url(mercury2.jpg)";
+			if(imagetwo == array[1])
+				document.getElementById(sum3).style.backgroundImage = "url(venus2.jpg)";
+			if(imagetwo == array[2])
+				document.getElementById(sum3).style.backgroundImage = "url(earth2.jpg)";
+			if(imagetwo == array[3])
+				document.getElementById(sum3).style.backgroundImage = "url(mars2.jpg)";
+			if(imagetwo == array[4])
+				document.getElementById(sum3).style.backgroundImage = "url(jupiter2.jpg)";
+			if(imagetwo == array[5])
+				document.getElementById(sum3).style.backgroundImage = "url(saturn2.jpg)";
+			if(imagetwo == array[6])
+				document.getElementById(sum3).style.backgroundImage = "url(uranus2.jpg)";
+			if(imagetwo == array[7])
+				document.getElementById(sum3).style.backgroundImage = "url(neptune2.jpg)";
+			
+			TURN = PLAYERONE;
+			document.getElementById("one").style.color = "yellow";
+			document.getElementById("two").style.color = "white";
+			document.getElementById("status").innerHTML = "Player 1's Turn";
+		}
+		check();
+	}
+	
+	function cuatro()
+	{
+		if(TURN == PLAYERONE)
+		{
+			array4.push("the");
+			sum4 = 29 - array4.length;
+			
+			if(sum4 < 22)
+				sum4 = null;
+			
+			if(imageone == array[0])
+				document.getElementById(sum4).style.backgroundImage = "url(mercury2.jpg)";
+			if(imageone == array[1])
+				document.getElementById(sum4).style.backgroundImage = "url(venus2.jpg)";
+			if(imageone == array[2])
+				document.getElementById(sum4).style.backgroundImage = "url(earth2.jpg)";
+			if(imageone == array[3])
+				document.getElementById(sum4).style.backgroundImage = "url(mars2.jpg)";
+			if(imageone == array[4])
+				document.getElementById(sum4).style.backgroundImage = "url(jupiter2.jpg)";
+			if(imageone == array[5])
+				document.getElementById(sum4).style.backgroundImage = "url(saturn2.jpg)";
+			if(imageone == array[6])
+				document.getElementById(sum4).style.backgroundImage = "url(uranus2.jpg)";
+			if(imageone == array[7])
+				document.getElementById(sum4).style.backgroundImage = "url(neptune2.jpg)";
+			
+			TURN = PLAYERTWO;
+			document.getElementById("one").style.color = "white";
+			document.getElementById("two").style.color = "yellow";
+			document.getElementById("status").innerHTML = "Player 2's Turn";
+		}
+		else
+		{
+			array4.push("this");
+			sum4 = 29 - array4.length;
+			
+			if(sum4 < 22)
+				sum4 = null;
+			
+			if(imagetwo == array[0])
+				document.getElementById(sum4).style.backgroundImage = "url(mercury2.jpg)";
+			if(imagetwo == array[1])
+				document.getElementById(sum4).style.backgroundImage = "url(venus2.jpg)";
+			if(imagetwo == array[2])
+				document.getElementById(sum4).style.backgroundImage = "url(earth2.jpg)";
+			if(imagetwo == array[3])
+				document.getElementById(sum4).style.backgroundImage = "url(mars2.jpg)";
+			if(imagetwo == array[4])
+				document.getElementById(sum4).style.backgroundImage = "url(jupiter2.jpg)";
+			if(imagetwo == array[5])
+				document.getElementById(sum4).style.backgroundImage = "url(saturn2.jpg)";
+			if(imagetwo == array[6])
+				document.getElementById(sum4).style.backgroundImage = "url(uranus2.jpg)";
+			if(imagetwo == array[7])
+				document.getElementById(sum4).style.backgroundImage = "url(neptune2.jpg)";
+			
+			TURN = PLAYERONE;
+			document.getElementById("one").style.color = "yellow";
+			document.getElementById("two").style.color = "white";
+			document.getElementById("status").innerHTML = "Player 1's Turn";
+		}
+		check();
+	}
+	
+	function cinco()
+	{
+		if(TURN == PLAYERONE)
+		{
+			array5.push("the");
+			sum5 = 36 - array5.length;
+			
+			if(sum5 < 29)
+				sum5 = null;
+			
+			if(imageone == array[0])
+				document.getElementById(sum5).style.backgroundImage = "url(mercury2.jpg)";
+			if(imageone == array[1])
+				document.getElementById(sum5).style.backgroundImage = "url(venus2.jpg)";
+			if(imageone == array[2])
+				document.getElementById(sum5).style.backgroundImage = "url(earth2.jpg)";
+			if(imageone == array[3])
+				document.getElementById(sum5).style.backgroundImage = "url(mars2.jpg)";
+			if(imageone == array[4])
+				document.getElementById(sum5).style.backgroundImage = "url(jupiter2.jpg)";
+			if(imageone == array[5])
+				document.getElementById(sum5).style.backgroundImage = "url(saturn2.jpg)";
+			if(imageone == array[6])
+				document.getElementById(sum5).style.backgroundImage = "url(uranus2.jpg)";
+			if(imageone == array[7])
+				document.getElementById(sum5).style.backgroundImage = "url(neptune2.jpg)";
+			
+			TURN = PLAYERTWO;
+			document.getElementById("one").style.color = "white";
+			document.getElementById("two").style.color = "yellow";
+			document.getElementById("status").innerHTML = "Player 2's Turn";
+		}
+		else
+		{
+			array5.push("this");
+			sum5 = 36 - array5.length;
+			
+			if(sum5 < 29)
+				sum5 = null;
+			
+			if(imagetwo == array[0])
+				document.getElementById(sum5).style.backgroundImage = "url(mercury2.jpg)";
+			if(imagetwo == array[1])
+				document.getElementById(sum5).style.backgroundImage = "url(venus2.jpg)";
+			if(imagetwo == array[2])
+				document.getElementById(sum5).style.backgroundImage = "url(earth2.jpg)";
+			if(imagetwo == array[3])
+				document.getElementById(sum5).style.backgroundImage = "url(mars2.jpg)";
+			if(imagetwo == array[4])
+				document.getElementById(sum5).style.backgroundImage = "url(jupiter2.jpg)";
+			if(imagetwo == array[5])
+				document.getElementById(sum5).style.backgroundImage = "url(saturn2.jpg)";
+			if(imagetwo == array[6])
+				document.getElementById(sum5).style.backgroundImage = "url(uranus2.jpg)";
+			if(imagetwo == array[7])
+				document.getElementById(sum5).style.backgroundImage = "url(neptune2.jpg)";
+			
+			TURN = PLAYERONE;
+			document.getElementById("one").style.color = "yellow";
+			document.getElementById("two").style.color = "white";
+			document.getElementById("status").innerHTML = "Player 1's Turn";
+		}
+		check();
+	}
+	
+	function seis()
+	{
+		if(TURN == PLAYERONE)
+		{
+			array6.push("the");
+			sum6 = 43 - array6.length;
+			
+			if(sum6 < 36)
+				sum6 = null;
+			
+			if(imageone == array[0])
+				document.getElementById(sum6).style.backgroundImage = "url(mercury2.jpg)";
+			if(imageone == array[1])
+				document.getElementById(sum6).style.backgroundImage = "url(venus2.jpg)";
+			if(imageone == array[2])
+				document.getElementById(sum6).style.backgroundImage = "url(earth2.jpg)";
+			if(imageone == array[3])
+				document.getElementById(sum6).style.backgroundImage = "url(mars2.jpg)";
+			if(imageone == array[4])
+				document.getElementById(sum6).style.backgroundImage = "url(jupiter2.jpg)";
+			if(imageone == array[5])
+				document.getElementById(sum6).style.backgroundImage = "url(saturn2.jpg)";
+			if(imageone == array[6])
+				document.getElementById(sum6).style.backgroundImage = "url(uranus2.jpg)";
+			if(imageone == array[7])
+				document.getElementById(sum6).style.backgroundImage = "url(neptune2.jpg)";
+			
+			TURN = PLAYERTWO;
+			document.getElementById("one").style.color = "white";
+			document.getElementById("two").style.color = "yellow";
+			document.getElementById("status").innerHTML = "Player 2's Turn";
+		}
+		else
+		{
+			array6.push("this");
+			sum6 = 43 - array6.length;
+			
+			if(sum6 < 36)
+				sum6 = null;
+			
+			if(imagetwo == array[0])
+				document.getElementById(sum6).style.backgroundImage = "url(mercury2.jpg)";
+			if(imagetwo == array[1])
+				document.getElementById(sum6).style.backgroundImage = "url(venus2.jpg)";
+			if(imagetwo == array[2])
+				document.getElementById(sum6).style.backgroundImage = "url(earth2.jpg)";
+			if(imagetwo == array[3])
+				document.getElementById(sum6).style.backgroundImage = "url(mars2.jpg)";
+			if(imagetwo == array[4])
+				document.getElementById(sum6).style.backgroundImage = "url(jupiter2.jpg)";
+			if(imagetwo == array[5])
+				document.getElementById(sum6).style.backgroundImage = "url(saturn2.jpg)";
+			if(imagetwo == array[6])
+				document.getElementById(sum6).style.backgroundImage = "url(uranus2.jpg)";
+			if(imagetwo == array[7])
+				document.getElementById(sum6).style.backgroundImage = "url(neptune2.jpg)";
+			
+			TURN = PLAYERONE;
+			document.getElementById("one").style.color = "yellow";
+			document.getElementById("two").style.color = "white";
+			document.getElementById("status").innerHTML = "Player 1's Turn";
+		}
+		check();
+	}
+	
+	function siete()
+	{
+		if(TURN == PLAYERONE)
+		{
+			array7.push("the");
+			sum7 = 50 - array7.length;
+			
+			if(sum7 < 43)
+				sum7 = null;
+			
+			if(imageone == array[0])
+				document.getElementById(sum7).style.backgroundImage = "url(mercury2.jpg)";
+			if(imageone == array[1])
+				document.getElementById(sum7).style.backgroundImage = "url(venus2.jpg)";
+			if(imageone == array[2])
+				document.getElementById(sum7).style.backgroundImage = "url(earth2.jpg)";
+			if(imageone == array[3])
+				document.getElementById(sum7).style.backgroundImage = "url(mars2.jpg)";
+			if(imageone == array[4])
+				document.getElementById(sum7).style.backgroundImage = "url(jupiter2.jpg)";
+			if(imageone == array[5])
+				document.getElementById(sum7).style.backgroundImage = "url(saturn2.jpg)";
+			if(imageone == array[6])
+				document.getElementById(sum7).style.backgroundImage = "url(uranus2.jpg)";
+			if(imageone == array[7])
+				document.getElementById(sum7).style.backgroundImage = "url(neptune2.jpg)";
+			
+			TURN = PLAYERTWO;
+			document.getElementById("one").style.color = "white";
+			document.getElementById("two").style.color = "yellow";
+			document.getElementById("status").innerHTML = "Player 2's Turn";
+		}
+		else
+		{
+			array7.push("this");
+			sum7 = 50 - array7.length;
+			
+			if(sum7 < 43)
+				sum7 = null;
+			
+			if(imagetwo == array[0])
+				document.getElementById(sum7).style.backgroundImage = "url(mercury2.jpg)";
+			if(imagetwo == array[1])
+				document.getElementById(sum7).style.backgroundImage = "url(venus2.jpg)";
+			if(imagetwo == array[2])
+				document.getElementById(sum7).style.backgroundImage = "url(earth2.jpg)";
+			if(imagetwo == array[3])
+				document.getElementById(sum7).style.backgroundImage = "url(mars2.jpg)";
+			if(imagetwo == array[4])
+				document.getElementById(sum7).style.backgroundImage = "url(jupiter2.jpg)";
+			if(imagetwo == array[5])
+				document.getElementById(sum7).style.backgroundImage = "url(saturn2.jpg)";
+			if(imagetwo == array[6])
+				document.getElementById(sum7).style.backgroundImage = "url(uranus2.jpg)";
+			if(imagetwo == array[7])
+				document.getElementById(sum7).style.backgroundImage = "url(neptune2.jpg)";
+			
+			TURN = PLAYERONE;
+			document.getElementById("one").style.color = "yellow";
+			document.getElementById("two").style.color = "white";
+			document.getElementById("status").innerHTML = "Player 1's Turn";
+		}
+		check();
+	}
+	
+
+
+</script>
+<style>
+
+body
+{
+    height: 100%;
+	overflow: hidden;	
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: center;
+	padding: 400px 0;
+}
+
+.dot
+{
+	height: 60px;
+	width: 60px;
+	background-image: url("silver.jpg");
+	border-radius: 50%;
+	display: inline-block;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+div
+{
+	display: inline-block;
+}
+
+.board
+{
+	border: 15px solid blue;
+	background-color: blue;
+}
+
+#one
+{
+	font-size: 50px;
+	position: fixed;
+    top: 25px;
+    left: 75px;
+	color: white;
+}
+
+#two
+{
+	font-size: 50px;
+	position: fixed;
+    top: 25px;
+    right: 75px;
+	color: white;
+}
+
+.mars
+{
+	position: absolute;
+	top: 120px;
+	left: 40px;
+	width:120px;
+    heigh`t:120px;
+}
+
+.earth
+{
+	position: absolute;
+	top: 120px;
+	left: 30px;
+	width:120px;
+    height:120px;
+}
+
+.jupiter
+{
+	position: absolute;
+    top: 120px;
+	left: 30px;
+	width:150px;
+    height:120px;
+}
+
+.mercury
+{
+	position: absolute;
+	top: 120px;
+	left: -15px;
+	width:190px;
+    height:110px;
+}
+
+.neptune
+{
+	position: absolute;
+    top: 120px;
+	left: 30px;
+	width:140px;
+    height:140px;
+}
+
+.saturn
+{
+	position: absolute;
+	top: 100px;
+	left: 30px;
+	width: 230px;
+    height: 140px;
+}
+
+.uranus
+{
+	position: absolute;
+	top: 120px;
+	left: 30px;;
+	width:150px;
+    height:150px;
+}
+
+.venus
+{
+	position: absolute;
+	top: 120px;
+	left: 30px;
+	width:110px;
+    height:110px;
+}
+
+.earth2
+{
+	position: absolute;
+    top: 120px;
+	right: 30px;
+	width:120px;
+    height:120px;
+}
+
+.jupiter2
+{
+	position: absolute;
+	top: 120px;
+	right: 30px;
+	width:150px;
+    height:120px;
+}
+
+.mercury2
+{
+	position: absolute;
+    top: 120px;
+	right: -15px;
+	width:190px;
+    height:110px;
+}
+
+.neptune2
+{
+	position: absolute;
+    top: 120px;
+	right: 30px;
+	width:140px;
+    height:140px;
+}
+
+.saturn2
+{
+	position: absolute;
+	top: 120px;
+	right: 30px;
+	width: 250px;
+    height: 160px;
+}
+
+.uranus2
+{
+	position: absolute;
+	top: 120px;
+	right: 30px;
+	width:150px;
+    height:150px;
+}
+
+.venus2
+{
+	position: absolute;
+	top: 120px;
+	right: 30px;
+	width:110px;
+    height:110px;
+}
+
+.mars2
+{
+	position: absolute;
+	top: 120px;
+	right: 40px;
+	width:120px;
+    height:120px;
+}
+
+.new
+{
+	background-color:clear;
+	color: White;
+	font-size: 30px;
+	position: absolute;
+	top: 50px;
+	left: 800px;
+}
+
+.home
+{
+	background-color:clear;
+	color: White;
+	font-size: 30px;
+	position: absolute;
+	top: 50px;
+	left: 1000px;
+}
+
+#picOne
+{
+	position: fixed;
+    top: 100px;
+    left: 50px;
+}
+
+#picTwo
+{
+	position: fixed;
+    top: 100px;
+    right: 50px;
+}
+
+#status
+{
+	color: Red;
+	font-size: 35px;
+	position: fixed;
+	top: 126px;
+	left: 900px;
+}
+
+#color
+{
+color: Red;
+font-size: 35px;
+position: fixed;
+top: 90px;
+left: 795px;
+}
+
+</style>
+</head>
+<body onload = "initialize()" background = "game.png">
+<div id = "one"></div>
+<div id = "two"></div>
+<img id = "picOne" src = ""/>
+<img id = "picTwo" src = ""/>
+<a href = "name.html" class = "new">New Game</a>
+<a href = "home.html" class = "home">Menu</a>
+
+<p id = "color"> Status: <p/>  <div id = "status"></div>
+
+<div class = "board">
+	<div id = "first" onclick = "uno();">
+	<span id = "1" class = "dot"></span></br>
+	<span id = "2" class = "dot"></span></br>
+	<span id = "3" class = "dot"></span></br>
+	<span id = "4" class = "dot"></span></br>
+	<span id = "5" class = "dot"></span></br>
+	<span id = "6" class = "dot"></span></br>
+	<span id = "7" class = "dot"></span>
+	</div>
+	<div id = "second" onclick = "dos();">
+	<span id = "8" class = "dot"></span></br>
+	<span id = "9" class = "dot"></span></br>
+	<span id = "10" class = "dot"></span></br>
+	<span id = "11" class = "dot"></span></br>
+	<span id = "12" class = "dot"></span></br>
+	<span id = "13" class = "dot"></span></br>
+	<span id = "14" class = "dot"></span>
+	</div>
+	<div id = "third" onclick = "tres();">
+	<span id = "15" class = "dot"></span></br>
+	<span id = "16" class = "dot"></span></br>
+	<span id = "17" class = "dot"></span></br>
+	<span id = "18" class = "dot"></span></br>
+	<span id = "19" class = "dot"></span></br>
+	<span id = "20" class = "dot"></span></br>
+	<span id = "21" class = "dot"></span>
+	</div>
+	<div id = "fourth" onclick = "cuatro();">
+	<span id = "22" class = "dot"></span></br>
+	<span id = "23" class = "dot"></span></br>
+	<span id = "24" class = "dot"></span></br>
+	<span id = "25" class = "dot"></span></br>
+	<span id = "26" class = "dot"></span></br>
+	<span id = "27" class = "dot"></span></br>
+	<span id = "28" class = "dot"></span>
+	</div>
+	<div id = "fifth" onclick = "cinco();">
+	<span id = "29" class = "dot"></span></br>
+	<span id = "30" class = "dot"></span></br>
+	<span id = "31" class = "dot"></span></br>
+	<span id = "32" class = "dot"></span></br>
+	<span id = "33" class = "dot"></span></br>
+	<span id = "34" class = "dot"></span></br>
+	<span id = "35" class = "dot"></span>
+	</div>
+	<div id = "sixth" onclick = "seis();">
+	<span id = "36" class = "dot"></span></br>
+	<span id = "37" class = "dot"></span></br>
+	<span id = "38" class = "dot"></span></br>
+	<span id = "39" class = "dot"></span></br>
+	<span id = "40" class = "dot"></span></br>
+	<span id = "41" class = "dot"></span></br>
+	<span id = "42" class = "dot"></span>
+	</div>
+	<div id = "seventh" onclick = "siete();">
+	<span id = "43" class = "dot"></span></br>
+	<span id = "44" class = "dot"></span></br>
+	<span id = "45" class = "dot"></span></br>
+	<span id = "46" class = "dot"></span></br>
+	<span id = "47" class = "dot"></span></br>
+	<span id = "48" class = "dot"></span></br>
+	<span id = "49" class = "dot"></span>
+	</div>
+</div>
+</body>
+</html>
+
